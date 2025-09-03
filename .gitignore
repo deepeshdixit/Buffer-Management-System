@@ -1,0 +1,9 @@
+ Compiled Object files
+*.o
+
+# Executables
+bin/
+*.exe
+
+# Log files
+logs/

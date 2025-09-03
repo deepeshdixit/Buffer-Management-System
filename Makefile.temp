@@ -1,0 +1,11 @@
+all: ./bin/opt/table
+
+./bin/opt/table: ./src/table.cpp ./src/DiskManager.cpp ./src/Page.cpp | ./bin/opt
+	g++ -std=c++20 -I./include -o $@ $^
+
+./bin/opt:
+	mkdir -p ./bin/opt
+
+.PHONY: clean
+clean:
+	rm -rf ./bin/opt ./obj/opt
